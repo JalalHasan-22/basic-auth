@@ -3,7 +3,7 @@
 const { Sequelize, DataTypes } = require("sequelize");
 const Users = require("./user-model");
 
-//require("dotenv").config();
+require("dotenv").config();
 
 const POSTGRES_URI =
   process.env.NODE_ENV === "test" ? "sqlite:memory" : process.env.DATABASE_URL;

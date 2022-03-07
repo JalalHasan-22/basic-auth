@@ -20,7 +20,7 @@ const sequelizeOptions =
       }
     : {};
 
-const sequelize = new Sequelize(POSTGRES_URL, {});
+const sequelize = new Sequelize(POSTGRES_URL, sequelizeOptions);
 
 module.exports = {
   db: sequelize,

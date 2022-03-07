@@ -5,7 +5,7 @@ const Users = require("./user-model");
 
 require("dotenv").config();
 
-const POSTGRES_URL =
+const POSTGRES_URI =
   process.env.NODE_ENV === "test" ? "sqlite:memory" : process.env.DATABASE_URL;
 
 const sequelizeOptions =
@@ -20,7 +20,7 @@ const sequelizeOptions =
       }
     : {};
 
-const sequelize = new Sequelize(POSTGRES_URL, sequelizeOptions);
+const sequelize = new Sequelize(POSTGRES_URI, sequelizeOptions);
 
 module.exports = {
   db: sequelize,
